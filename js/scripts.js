@@ -5,11 +5,17 @@
 function pigLatin(userInput) {
   var vowels = ['a', 'e', 'i', 'o', 'u'];
   var splitWord = userInput.split('');
+
   if (vowels.includes(userInput.charAt(0))) {
     return userInput += 'way';
   } else {
     for (var i = 0; i < userInput.length; i++) {
-      if (!vowels.includes(userInput[i])) {
+      if ((userInput.charAt(0))===('q')) {
+        console.log("hello")
+        splitWord.push(splitWord.shift());
+        splitWord.push(splitWord.shift());
+        return splitWord.join('');
+      } else if (!vowels.includes(userInput[i])) {
         splitWord.push(splitWord.shift());
       } else {
         splitWord.push('ay');
