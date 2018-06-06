@@ -1,67 +1,32 @@
-// var leapYear = function(year) {
-//   if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
 
-// //business logic
-// var leapYear = function(year) {
-//   if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-//
-// };
 
-// // interface logit
-// $(document).ready(function() {
-//   $("form#leap-year").submit(function(event) {
-//     event.preventDefault();
-//     var year = parseInt($("input#year").val());
-//     var result = leapYear(year);
-//     $("#result").text(result);
-//   });
-// });
-
-// Pig Latin Scripts
 // business logic
-var pigLatin = function(word){
-  // return false;
-  return (word);
-};
+
+function pigLatin(userInput) {
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  var splitWord = userInput.split('');
+  if (vowels.includes(userInput.charAt(0))) {
+    return userInput += 'way';
+  } else {
+    for (var i = 0; i < userInput.length; i++) {
+      if (!vowels.includes(userInput[i])) {
+        splitWord.push(splitWord.shift());
+      } else {
+        splitWord.push('ay');
+        return splitWord.join('');
+      }
+    }
+  }
+}
 
 // UI logic
+
 $(document).ready(function() {
 
-  var pigLatin = function(word){
-    // return false;
-    return (word);
-  };
-
-
-
-
-  $("form#pig-latin").submit(function(event) {
-    event.preventDefault();
-
-
-
-
-    console.log(wordSlices);
-    var word = $("input#word").val();
-    var result = pigLatin(word);
+$("form#pig-latin").submit(function(event) {
+  event.preventDefault();
+    var userInput = $("input#userInput").val();
+    var result = pigLatin(userInput);
     $("#result").text(result);
-
-
-    var vowels = ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"];
-    var wordSlices = word.split("");
-    console.log(wordSlices);
-
-    if (wordslices[0] === )
-
-
   });
 });
