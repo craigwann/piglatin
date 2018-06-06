@@ -25,3 +25,5 @@ $(document).ready(function() {
     $("#result").text(result);
   });
 });
+
+// Pig Latin Scripts
