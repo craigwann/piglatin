@@ -1,8 +1,8 @@
-# Scrabble Score Checker
+# Pig Latin generator
 
-#### A program that allows users to input a word and determine its raw Scrabble score, assuming no special tiles. 6/1/17
+#### A program that allows users to input a word and outputs its pig latin version. 6/6/18
 
-#### By **Marilyn Carlin and David Wilson**
+#### By **Craig Wann and Eric **
 
 ## Description
 
@@ -12,12 +12,11 @@ A website created with C# and HTML where a user can submit a word and determine 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Homepage** | User accesses localhost:5004 | Homepage with user input form |
-| **Program Gathers User Input** | User input: "pants" | Output: "pants" |
-| **Program Removes Spaces from User Input**| User Input: "pants pants" | Output: "pantspants" |
-| **Program Removes Punctuation from User Input**| Input: "p#an^t@s  /p(ant%s" | Output: "pantspants" |
-| **Program Assigns Characters Numeric Values** | Input: "pants" | Output: "3 1 1 1 1" |
-| **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
+| **word begins with vowel** | User Input: "under" |  Output: "underWay" |
+| **word begins with consonant** | User Input: "dog |  Output: "ogDay" |
+| **word begins with multi-consonants **| User Input: "strong" | Output: "pantspants" |
+| **word begins with "Y"**| Input: "you" | Output: "ouYay" |
+| **word begins with "QU"** | Input: "queen" | Output: "eenQuay" |
 
 ## Setup/Installation Requirements
 
@@ -47,4 +46,4 @@ _Email no one with any questions, comments, or concerns._
 
 *{This software is licensed under the MIT license}*
 
-Copyright (c) 2017 **_{Marilyn Carlin, David Wilson}_**
+Copyright (c) 2018 **_{Craig & Eric}_**
