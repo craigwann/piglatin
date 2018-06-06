@@ -28,7 +28,10 @@
 
 // Pig Latin Scripts
 // business logic
-
+var pigLatin = function(word){
+  // return false;
+  return (word);
+};
 
 // UI logic
 $(document).ready(function() {
@@ -36,13 +39,29 @@ $(document).ready(function() {
   var pigLatin = function(word){
     // return false;
     return (word);
-  }
+  };
+
+
 
 
   $("form#pig-latin").submit(function(event) {
     event.preventDefault();
+
+
+
+
+    console.log(wordSlices);
     var word = $("input#word").val();
     var result = pigLatin(word);
     $("#result").text(result);
+
+
+    var vowels = ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"];
+    var wordSlices = word.split("");
+    console.log(wordSlices);
+
+    if (wordslices[0] === )
+
+
   });
 });
